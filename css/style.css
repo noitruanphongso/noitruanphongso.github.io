@@ -1,11 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap');
+/* =========================================
+   NHÀ NỘI TRÚ ANPHONGSÔ
+   Main stylesheet
+   ========================================= */
 
+/* 1. THIẾT LẬP CHUNG */
 :root {
     --navy: #142B49;
+    --navy-light: #203D60;
     --gold: #B99A62;
-    --cream: #F6F3EC;
+    --ivory: #F6F3EC;
     --white: #FFFFFF;
+    --gray: #687385;
+    --light-gray: #F4F5F7;
+    --heading-font: 'Playfair Display', Georgia, serif;
+    --body-font: Arial, sans-serif;
 }
 
 * {
@@ -14,553 +23,417 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #263445;
-    line-height: 1.7;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: var(--body-font);
+    color: var(--navy);
+    line-height: 1.7;
+    background: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 2. HEADER */
 .header {
-    min-height: 105px;
-    padding: 12px 6%;
+    background: var(--white);
+    min-height: 90px;
+    padding: 15px 5%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    background: white;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid #e8e5df;
+    position: relative;
+    z-index: 100;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 15px;
 }
 
-.logo {
-    width: 55px;
-    height: 55px;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    display: grid;
-    place-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 34px;
+.logo-img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
 .brand h1 {
+    font-family: var(--heading-font);
+    font-size: 21px;
     color: var(--navy);
-    font-size: 17px;
     letter-spacing: 1px;
 }
 
 .brand p {
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 11px;
     color: var(--gold);
+    letter-spacing: 2px;
 }
 
-nav {
+/* 3. NAVIGATION */
+#navigation {
     display: flex;
-    gap: 22px;
     align-items: center;
+    gap: 22px;
 }
 
-nav a {
-    color: var(--navy);
-    text-decoration: none;
+#navigation a {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--navy);
+    transition: 0.3s;
 }
 
-nav a:hover {
+#navigation a:hover {
     color: var(--gold);
 }
 
 .menu-toggle {
     display: none;
     background: none;
-    border: 0;
-    font-size: 25px;
+    border: none;
     color: var(--navy);
+    font-size: 28px;
     cursor: pointer;
 }
 
+/* 4. HERO */
 .hero {
-    min-height: 550px;
+    min-height: 540px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 43, 73, 0.96),
+            rgba(20, 43, 73, 0.72)
+        ),
+        linear-gradient(135deg, #203D60, #142B49);
     display: flex;
     align-items: center;
     padding: 80px 10%;
-    color: white;
-    background:
-        linear-gradient(90deg,
-        rgba(10, 29, 52, .95),
-        rgba(10, 29, 52, .48)),
-        url('../images/banner.jpg') center/cover;
+    color: var(--white);
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 760px;
 }
 
-.eyebrow, .section-label {
-    color: var(--gold);
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: 700;
+.eyebrow {
+    color: #D9BD86;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .hero h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(38px, 5vw, 64px);
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 5vw, 58px);
     line-height: 1.2;
-    margin: 22px 0;
+    margin-bottom: 25px;
 }
 
 .hero p {
-    max-width: 550px;
-    color: #E1E7EF;
+    font-size: 17px;
+    color: #E3E8EF;
+    max-width: 650px;
     margin-bottom: 32px;
 }
 
+/* 5. BUTTON */
 .btn {
     display: inline-block;
-    padding: 14px 25px;
+    padding: 13px 30px;
     background: var(--gold);
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: bold;
     letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-.intro {
-    padding: 90px 15%;
-    text-align: center;
-    background: var(--cream);
-}
-
-.intro h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
+.btn:hover {
+    background: var(--white);
     color: var(--navy);
-    margin: 15px 0;
+    transform: translateY(-3px);
+}
+
+/* 6. INTRODUCTION */
+.intro {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--ivory);
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.intro h2,
+.section-heading h2,
+.closing-message h2 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 22px;
 }
 
 .intro p {
-    max-width: 750px;
-    margin: auto;
+    color: var(--gray);
+    margin-bottom: 18px;
 }
 
 .text-link {
     display: inline-block;
-    margin-top: 25px;
-    color: var(--navy);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 75px 8%;
-}
-
-.feature {
-    padding: 30px;
-    border: 1px solid #E4E0D8;
-}
-
-.feature span {
     color: var(--gold);
-    font-size: 25px;
+    font-weight: bold;
+    margin-top: 12px;
 }
 
-.feature h3 {
-    font-family: 'Playfair Display', serif;
+.text-link:hover {
     color: var(--navy);
-    margin: 12px 0;
 }
 
-footer {
-    padding: 45px 20px;
-    text-align: center;
-    background: var(--navy);
-    color: white;
-}
-
-footer h3 {
-    letter-spacing: 2px;
-}
-
-footer p {
-    font-size: 13px;
-    color: #D4DCE6;
-    margin-top: 8px;
-}
-
-@media (max-width: 900px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 95px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        z-index: 10;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-}
-.logo-img {
-    width: 76px;
-    height: 76px;
-    object-fit: contain;
-    display: block;
-}
-/* ===== NĂM GIÁ TRỊ CỐT LÕI ===== */
-
+/* 7. CORE VALUES */
 .core-values {
-    padding: 90px 8%;
-    background: #f5f3ed;
+    padding: 100px 7%;
+    background: var(--white);
 }
 
 .section-heading {
-    max-width: 750px;
-    margin: 0 auto 45px;
     text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
 }
 
 .section-heading h2 {
-    color: #142b49;
-    font-size: 36px;
-    margin: 15px 0;
-}
-
-.section-heading p {
-    color: #666;
-    line-height: 1.8;
+    color: var(--navy);
 }
 
 .values-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .value-card {
-    background: white;
     padding: 30px 22px;
-    border-bottom: 3px solid #b89a5a;
-    transition: transform 0.3s ease;
+    background: var(--ivory);
+    border-bottom: 3px solid var(--gold);
+    transition: 0.3s;
 }
 
 .value-card:hover {
-    transform: translateY(-6px);
-}
-
-.value-card span {
-    color: #b89a5a;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.value-card h3 {
-    color: #142b49;
-    font-size: 21px;
-    margin: 18px 0 12px;
-}
-
-.value-card p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-/* ===== TIÊU ĐỀ CÁC PHẦN ===== */
-
-.section-label {
-    color: #a18448;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-/* ===== THÔNG ĐIỆP CUỐI TRANG ===== */
-
-.closing-message {
-    padding: 100px 20px;
-    text-align: center;
-    background: #142b49;
-    color: white;
-}
-
-.closing-message h2 {
-    font-size: 40px;
-    line-height: 1.4;
-    margin: 20px 0;
-}
-
-.closing-message p {
-    color: #d8dce3;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.closing-message .btn {
-    display: inline-block;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 1000px) {
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .core-values {
-        padding: 60px 6%;
-    }
-
-    .section-heading h2 {
-        font-size: 28px;
-    }
-
-    .closing-message h2 {
-        font-size: 30px;
-    }
-}
-/* ===== NÂNG CẤP THẺ CHỨC NĂNG ===== */
-
-.features {
-    padding: 90px 8%;
-    gap: 28px;
-    background: #ffffff;
-}
-
-.feature {
-    position: relative;
-    padding: 38px 30px;
-    background: #ffffff;
-    border: 1px solid #e8e4dc;
-    border-bottom: 3px solid #b99a62;
-    transition: all 0.3s ease;
-}
-
-.feature:hover {
     transform: translateY(-7px);
     box-shadow: 0 12px 30px rgba(20, 43, 73, 0.10);
 }
 
-.feature span {
-    display: inline-block;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #b99a62;
-    font-weight: 700;
-}
-
-.feature h3 {
-    font-size: 24px;
-    margin: 18px 0 12px;
-}
-
-.feature p {
-    color: #657080;
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.feature a {
-    color: #142b49;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.feature a:hover {
-    color: #b99a62;
-}
-/* ===== NÂNG CẤP HEADER ===== */
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 15px rgba(20, 43, 73, 0.06);
-    border-bottom: 1px solid #eeeae2;
-}
-
-.brand {
-    flex-shrink: 0;
-}
-
-.brand h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    letter-spacing: 1.2px;
-}
-
-.brand p {
-    line-height: 1.5;
-    font-size: 9px;
-}
-
-/* ===== THANH ĐIỀU HƯỚNG ===== */
-
-nav a {
-    position: relative;
-    padding: 10px 0;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 0;
-    height: 2px;
-    background: #b99a62;
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ===== HIỆU ỨNG LOGO ===== */
-
-.logo-img {
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
-}
-/* ===== NÂNG CẤP FOOTER ===== */
-
-footer {
-    padding: 65px 8% 25px;
-    background: #10243d;
-    color: #ffffff;
-    text-align: center;
-    border-top: 3px solid #b99a62;
-}
-
-footer h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    letter-spacing: 2px;
+.value-card h3 {
+    font-family: var(--heading-font);
+    font-size: 19px;
     margin-bottom: 15px;
 }
 
-footer p {
-    color: #d5dce5;
-    font-size: 13px;
-    line-height: 1.9;
-    margin-top: 10px;
+.value-card p {
+    color: var(--gray);
+    font-size: 14px;
 }
 
-footer p:last-child {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 12px;
+/* 8. FEATURES */
+.features {
+    padding: 90px 7%;
+    background: var(--light-gray);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
-/* ===== TRANG GIỚI THIỆU ===== */
 
-/* Banner đầu trang */
+.feature {
+    background: var(--white);
+    padding: 40px 30px;
+    border-top: 3px solid var(--gold);
+    transition: 0.3s;
+}
 
-.page-banner {
-    padding: 90px 8%;
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 43, 73, 0.08);
+}
+
+.feature h3 {
+    font-family: var(--heading-font);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: var(--gray);
+}
+
+/* 9. CLOSING MESSAGE */
+.closing-message {
+    padding: 85px 10%;
     text-align: center;
-    background: #142b49;
-    color: white;
-    border-bottom: 4px solid #b99a62;
+    background: var(--navy);
+    color: var(--white);
 }
 
-.page-banner h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin: 15px 0;
+.closing-message h2 {
+    color: var(--white);
 }
 
-.page-banner p {
-    color: #d8dce3;
-    font-size: 16px;
+.closing-message p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #DCE3EC;
 }
 
-/* Triết lý giáo dục */
-
-.about-section {
-    padding: 90px 12%;
-    background: #ffffff;
+/* 10. FOOTER */
+footer {
+    background: #0D1E33;
+    color: #DCE3EC;
+    padding: 35px 7%;
+    text-align: center;
+    font-size: 13px;
 }
 
-.about-content {
-    max-width: 850px;
-    margin: auto;
-    padding-left: 30px;
-    border-left: 3px solid #b99a62;
+footer p {
+    margin: 5px 0;
 }
 
-.about-content h2 {
-    font-family: 'Playfair Display', serif;
-    color: #142b49;
-    font-size: 34px;
-    line-height: 1.4;
-    margin: 18px 0;
-}
-
-.about-content p {
-    color: #5e6875;
-    font-size: 15px;
-    line-height: 2;
-    margin-bottom: 18px;
-}
-
-/* Hiển thị trên điện thoại */
-
-@media (max-width: 600px) {
-    .page-banner {
-        padding: 65px 6%;
+/* 11. RESPONSIVE - TABLET */
+@media (max-width: 1000px) {
+    #navigation {
+        gap: 12px;
     }
 
-    .page-banner h2 {
+    #navigation a {
+        font-size: 11px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 12. RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+    .header {
+        min-height: 75px;
+    }
+
+    .brand h1 {
+        font-size: 16px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 7%;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    #navigation.active {
+        display: flex;
+    }
+
+    #navigation a {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 65px 7%;
+    }
+
+    .hero h2 {
         font-size: 36px;
     }
 
-    .about-section {
-        padding: 60px 7%;
+    .intro {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+        gap: 25px;
     }
 
-    .about-content {
-        padding-left: 20px;
+    .core-values {
+        padding: 65px 7%;
     }
 
-    .about-content h2 {
-        font-size: 27px;
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+    }
+
+    .closing-message {
+        padding: 65px 7%;
     }
 }
 
+/* 13. RESPONSIVE - SMALL MOBILE */
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 31px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .closing-message h2 {
+        font-size: 28px;
+    }
+}
