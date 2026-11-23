@@ -230,4 +230,122 @@ footer p {
     object-fit: contain;
     display: block;
 }
+/* ===== NĂM GIÁ TRỊ CỐT LÕI ===== */
+
+.core-values {
+    padding: 90px 8%;
+    background: #f5f3ed;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #142b49;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.value-card {
+    background: white;
+    padding: 30px 22px;
+    border-bottom: 3px solid #b89a5a;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+}
+
+.value-card span {
+    color: #b89a5a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.value-card h3 {
+    color: #142b49;
+    font-size: 21px;
+    margin: 18px 0 12px;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ===== TIÊU ĐỀ CÁC PHẦN ===== */
+
+.section-label {
+    color: #a18448;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ===== THÔNG ĐIỆP CUỐI TRANG ===== */
+
+.closing-message {
+    padding: 100px 20px;
+    text-align: center;
+    background: #142b49;
+    color: white;
+}
+
+.closing-message h2 {
+    font-size: 40px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.closing-message p {
+    color: #d8dce3;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.closing-message .btn {
+    display: inline-block;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1000px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .core-values {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .closing-message h2 {
+        font-size: 30px;
+    }
+}
 
