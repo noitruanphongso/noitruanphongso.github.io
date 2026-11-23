@@ -21,8 +21,8 @@ body {
 }
 
 .header {
-    min-height: 95px;
-    padding: 15px 6%;
+    min-height: 105px;
+    padding: 12px 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -225,8 +225,9 @@ footer p {
     }
 }
 .logo-img {
-    width: 70px;
-    height: 70px;
+    width: 76px;
+    height: 76px;
     object-fit: contain;
     display: block;
 }
+
