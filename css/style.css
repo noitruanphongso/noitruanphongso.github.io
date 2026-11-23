@@ -437,3 +437,141 @@ footer p {
         font-size: 28px;
     }
 }
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Các hoạt động tại Nhà Nội Trú Anphongsô.">
+    <title>Hoạt động | Nhà Nội Trú Anphongsô</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="images/logo-anphongso.png"
+             alt="Logo Nhà Nội Trú Anphongsô"
+             class="logo-img">
+        <div>
+            <h1>NHÀ NỘI TRÚ ANPHONGSÔ</h1>
+            <p>SỨC KHOẺ · NHÂN BẢN · KỸ NĂNG · TRI THỨC · ĐỨC TIN</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Mở menu" aria-expanded="false"
+            aria-controls="navigation">☰</button>
+
+    <nav id="navigation">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="education.html">Giáo dục</a>
+        <a href="activities.html">Hoạt động</a>
+        <a href="library.html">Thư viện</a>
+        <a href="news.html">Tin tức</a>
+        <a href="team.html">Tổ chức</a>
+        <a href="contact.html">Liên hệ</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-banner">
+        <span class="section-label">NHÀ NỘI TRÚ ANPHONGSÔ</span>
+        <h2>Hoạt động</h2>
+        <p>Học tập, trải nghiệm và trưởng thành qua từng hoạt động.</p>
+    </section>
+
+    <section class="intro">
+        <span class="section-label">SINH HOẠT VÀ TRẢI NGHIỆM</span>
+        <h2>Học tập từ thực tiễn</h2>
+        <p>
+            Các hoạt động giáo dục và trải nghiệm có thể góp phần
+            phát triển kỹ năng, tinh thần hợp tác, ý thức kỷ luật
+            và trách nhiệm đối với cộng đồng.
+        </p>
+    </section>
+
+    <section class="core-values">
+        <div class="section-heading">
+            <span class="section-label">CÁC LĨNH VỰC HOẠT ĐỘNG</span>
+            <h2>Phát triển qua trải nghiệm</h2>
+            <p>
+                Những lĩnh vực có thể được giới thiệu
+                trong chương trình hoạt động của Nhà Nội Trú.
+            </p>
+        </div>
+
+        <div class="values-grid">
+
+            <article class="value-card">
+                <span>01</span>
+                <h3>Văn hoá</h3>
+                <p>
+                    Góp phần bồi dưỡng đời sống văn hoá,
+                    khả năng cảm thụ và sáng tạo.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <span>02</span>
+                <h3>Thể thao</h3>
+                <p>
+                    Khuyến khích rèn luyện thể chất,
+                    tinh thần đồng đội và lối sống lành mạnh.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <span>03</span>
+                <h3>Kỹ năng</h3>
+                <p>
+                    Tạo cơ hội thực hành giao tiếp,
+                    hợp tác và giải quyết vấn đề.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <span>04</span>
+                <h3>Phục vụ cộng đồng</h3>
+                <p>
+                    Nuôi dưỡng tinh thần sẻ chia,
+                    trách nhiệm và ý thức phục vụ.
+                </p>
+            </article>
+
+            <article class="value-card">
+                <span>05</span>
+                <h3>Đời sống tinh thần</h3>
+                <p>
+                    Quan tâm đến đời sống nội tâm,
+                    sự bình an và phát triển tinh thần.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="closing-message">
+        <span class="section-label">NHÀ NỘI TRÚ ANPHONGSÔ</span>
+        <h2>Trải nghiệm để trưởng thành.</h2>
+        <p>
+            Mỗi trải nghiệm là một cơ hội học tập
+            và hoàn thiện bản thân.
+        </p>
+        <a href="contact.html" class="btn">LIÊN HỆ VỚI CHÚNG TÔI</a>
+    </section>
+
+</main>
+
+<footer>
+    <h3>NHÀ NỘI TRÚ ANPHONGSÔ</h3>
+    <p>SỨC KHOẺ · NHÂN BẢN · KỸ NĂNG · TRI THỨC · ĐỨC TIN</p>
+    <p>© 2026 Nhà Nội Trú Anphongsô. Bảo lưu các quyền.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
