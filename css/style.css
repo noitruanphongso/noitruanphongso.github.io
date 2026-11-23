@@ -488,4 +488,79 @@ footer p:last-child {
     border-top: 1px solid rgba(255,255,255,0.15);
     font-size: 12px;
 }
+/* ===== TRANG GIỚI THIỆU ===== */
+
+/* Banner đầu trang */
+
+.page-banner {
+    padding: 90px 8%;
+    text-align: center;
+    background: #142b49;
+    color: white;
+    border-bottom: 4px solid #b99a62;
+}
+
+.page-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.page-banner p {
+    color: #d8dce3;
+    font-size: 16px;
+}
+
+/* Triết lý giáo dục */
+
+.about-section {
+    padding: 90px 12%;
+    background: #ffffff;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    padding-left: 30px;
+    border-left: 3px solid #b99a62;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: #142b49;
+    font-size: 34px;
+    line-height: 1.4;
+    margin: 18px 0;
+}
+
+.about-content p {
+    color: #5e6875;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+/* Hiển thị trên điện thoại */
+
+@media (max-width: 600px) {
+    .page-banner {
+        padding: 65px 6%;
+    }
+
+    .page-banner h2 {
+        font-size: 36px;
+    }
+
+    .about-section {
+        padding: 60px 7%;
+    }
+
+    .about-content {
+        padding-left: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+}
 
