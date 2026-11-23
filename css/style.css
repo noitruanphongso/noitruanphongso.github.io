@@ -458,4 +458,34 @@ nav a:hover::after {
 .logo-img:hover {
     transform: scale(1.05);
 }
+/* ===== NÂNG CẤP FOOTER ===== */
+
+footer {
+    padding: 65px 8% 25px;
+    background: #10243d;
+    color: #ffffff;
+    text-align: center;
+    border-top: 3px solid #b99a62;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #d5dce5;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 10px;
+}
+
+footer p:last-child {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 12px;
+}
 
