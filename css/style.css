@@ -594,3 +594,70 @@ footer {
     }
 
 }
+/* =========================================
+   ADVANCED VISUAL EFFECTS
+   ========================================= */
+
+/* Hiệu ứng chuyển động mượt */
+.value-card,
+.feature,
+.footer-content a,
+.logo-img {
+    transition: all 0.35s ease;
+}
+
+/* Hiệu ứng hình ảnh */
+img {
+    transition: transform 0.4s ease;
+}
+
+/* Nút bấm */
+button,
+.btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Tiêu đề trang */
+.page-banner h2 {
+    animation: fadeInUp 0.8s ease both;
+}
+
+.page-banner p {
+    animation: fadeInUp 1s ease both;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lựa chọn văn bản */
+::selection {
+    background: var(--gold);
+    color: var(--white);
+}
+
+/* Cuộn trang */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hỗ trợ người dùng hạn chế chuyển động */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
