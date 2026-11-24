@@ -1384,3 +1384,78 @@ main .vision-mission .vision-card p {
         font-size: 26px;
     }
 }
+/* HIỆU ỨNG HOVER TOÀN TRANG */
+
+/* Thẻ tin tức */
+.news-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(20, 43, 73, 0.16);
+}
+
+/* Thẻ hoạt động */
+.activity-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(20, 43, 73, 0.2);
+}
+
+/* Ảnh tin nổi bật */
+.featured-image img {
+    transition: transform 0.5s ease;
+}
+
+.featured-image:hover img {
+    transform: scale(1.04);
+}
+
+/* Khu vực sự kiện */
+.event-feature {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.event-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(20, 43, 73, 0.12);
+}
+
+/* Các thẻ giá trị cốt lõi */
+.value-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(20, 43, 73, 0.12);
+}
+
+/* Các thẻ nội dung */
+.feature {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feature:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(20, 43, 73, 0.12);
+}
+
+/* Nút liên kết */
+.text-link,
+.news-card-content a {
+    transition: color 0.3s ease;
+}
+
+/* Hạn chế chuyển động nếu người dùng yêu cầu */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
