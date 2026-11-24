@@ -1,96 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toán học cơ bản | Nhà Nội Trú Anphongsô</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        .book-section {
-            padding: 45px 5%;
-            background: var(--cream);
-            text-align: center;
-        }
+<title>TOÁN HỌC CƠ BẢN | Nhà Nội Trú Anphongsô</title>
 
-        .book-toolbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin: 25px 0;
-            flex-wrap: wrap;
-        }
+<link rel="stylesheet" href="css/style.css">
 
-        .book-toolbar button {
-            padding: 12px 22px;
-            background: var(--navy);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        .book-toolbar button:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
+.reader-section {
+    padding: 35px 15px 60px;
+    background: #e9e5dc;
+    text-align: center;
+}
 
-        .book-frame {
-            max-width: 1000px;
-            min-height: 430px;
-            margin: 0 auto;
-            padding: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #e8e3d9;
-            border-radius: 8px;
-            box-shadow: 0 12px 35px rgba(20,43,73,.15);
-        }
+.reader-heading {
+    margin-bottom: 25px;
+}
 
-        .book-placeholder {
-            width: 100%;
-            min-height: 340px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            background: white;
-            color: var(--navy);
-            border: 1px solid #ddd;
-        }
+.reader-heading h2 {
+    color: #142b49;
+    font-size: 27px;
+}
 
-        .book-placeholder .book-symbol {
-            font-size: 60px;
-            margin-bottom: 15px;
-        }
+.reader-heading p {
+    color: #666;
+}
 
-        .book-placeholder h2 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 12px;
-        }
+.book-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
 
-        .book-placeholder p {
-            max-width: 550px;
-            line-height: 1.8;
-            color: var(--light-text);
-        }
+#book {
+    margin: auto;
+}
 
-        .book-note {
-            margin-top: 20px;
-            color: var(--light-text);
-            font-size: 14px;
-        }
+.page {
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+}
 
-        @media (max-width: 600px) {
-            .book-frame {
-                padding: 12px;
-                min-height: 350px;
-            }
-        }
-    </style>
+.page canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.controls button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #142b49;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.controls button:hover {
+    background: #b38a45;
+}
+
+.controls button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    color: #142b49;
+    font-weight: bold;
+    min-width: 110px;
+}
+
+#status {
+    color: #555;
+    margin: 15px;
+}
+
+#loading {
+    color: #142b49;
+    font-weight: bold;
+}
+
+@media(max-width:600px) {
+    .reader-section {
+        padding: 25px 5px;
+    }
+
+    .reader-heading h2 {
+        font-size: 21px;
+    }
+
+    .controls {
+        gap: 7px;
+    }
+
+    .controls button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -107,7 +135,8 @@
     </div>
 
     <button class="menu-toggle" id="menuToggle"
-            aria-label="Mở menu" aria-expanded="false"
+            aria-label="Mở menu"
+            aria-expanded="false"
             aria-controls="navigation">☰</button>
 
     <nav id="navigation">
@@ -123,45 +152,42 @@
 </header>
 
 <main>
-    <section class="page-banner">
-        <div>
-            <span class="eyebrow">THƯ VIỆN GIÁO DỤC</span>
-            <h2>TOÁN HỌC CƠ BẢN</h2>
-            <p>Giáo trình điện tử Nhà Nội Trú Anphongsô.</p>
-        </div>
-    </section>
 
-    <section class="book-section">
-        <div class="library-heading">
-            <span class="section-label">SÁCH ĐIỆN TỬ</span>
-            <h2>Toán học cơ bản</h2>
-            <p>Trình đọc sách theo bố cục hai trang mở.</p>
-        </div>
+<section class="page-banner">
+    <div>
+        <span class="eyebrow">THƯ VIỆN GIÁO DỤC</span>
+        <h2>TOÁN HỌC CƠ BẢN</h2>
+        <p>Giáo trình điện tử Nhà Nội Trú Anphongsô</p>
+    </div>
+</section>
 
-        <div class="book-frame">
-            <div class="book-placeholder">
-                <div class="book-symbol">📖</div>
-                <h2>TOÁN HỌC CƠ BẢN</h2>
-                <p>
-                    Giáo trình sẽ được hiển thị tại đây dưới dạng
-                    sách điện tử hai trang có hiệu ứng lật.
-                </p>
-                <p>
-                    Nội dung sách đang chờ tệp PDF gốc để tích hợp.
-                </p>
-            </div>
-        </div>
+<section class="reader-section">
 
-        <div class="book-toolbar">
-            <button disabled>← Trang trước</button>
-            <span>Chưa có nội dung sách</span>
-            <button disabled>Trang sau →</button>
-        </div>
+    <div class="reader-heading">
+        <h2>TOÁN HỌC CƠ BẢN</h2>
+        <p>Nhấn vào góc trang hoặc sử dụng nút điều khiển để lật sách.</p>
+    </div>
 
-        <p class="book-note">
-            Khi có tệp giáo trình PDF, trình đọc sách sẽ được hoàn thiện.
-        </p>
-    </section>
+    <div id="loading">Đang tải giáo trình...</div>
+
+    <div class="book-container">
+        <div id="book"></div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" disabled>← Trang trước</button>
+
+        <span id="pageInfo">Đang tải...</span>
+
+        <button id="nextBtn" disabled>Trang sau →</button>
+
+        <button id="fullscreenBtn">⛶ Toàn màn hình</button>
+    </div>
+
+    <p id="status">Đang kết nối với tệp giáo trình PDF.</p>
+
+</section>
+
 </main>
 
 <footer class="footer">
@@ -172,5 +198,176 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+
+<script>
+const filename =
+"TOÁN HỌC CƠ BẢN - VIE - OFFICIAL (Y Linh - VIE).pdf";
+
+const PDF_URL = "./" + encodeURIComponent(filename);
+
+const bookElement = document.getElementById("book");
+const loading = document.getElementById("loading");
+const status = document.getElementById("status");
+const pageInfo = document.getElementById("pageInfo");
+
+let pageFlip = null;
+let totalPages = 0;
+
+async function startBook() {
+
+    try {
+
+        if (!window.pdfjsLib) {
+            throw new Error("Không tải được thư viện PDF.");
+        }
+
+        if (!window.St || !window.St.PageFlip) {
+            throw new Error("Không tải được thư viện lật trang.");
+        }
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+        const pdf = await pdfjsLib.getDocument(PDF_URL).promise;
+
+        totalPages = pdf.numPages;
+
+        loading.textContent =
+        "Đang chuẩn bị " + totalPages + " trang sách...";
+
+        const pages = [];
+
+        for (let i = 1; i <= totalPages; i++) {
+
+            const page = document.createElement("div");
+
+            page.className = "page";
+
+            const canvas = document.createElement("canvas");
+
+            page.appendChild(canvas);
+
+            pages.push(page);
+
+            bookElement.appendChild(page);
+
+            const pdfPage = await pdf.getPage(i);
+
+            const viewport = pdfPage.getViewport({ scale: 1 });
+
+            const scale = 1.15;
+
+            const renderViewport =
+                pdfPage.getViewport({ scale: scale });
+
+            canvas.width = renderViewport.width;
+            canvas.height = renderViewport.height;
+
+            await pdfPage.render({
+                canvasContext: canvas.getContext("2d"),
+                viewport: renderViewport
+            }).promise;
+
+        }
+
+        pageFlip = new St.PageFlip(bookElement, {
+
+            width: 550,
+            height: 780,
+
+            size: "stretch",
+
+            minWidth: 280,
+            maxWidth: 550,
+
+            minHeight: 380,
+            maxHeight: 780,
+
+            showCover: true,
+
+            usePortrait: true,
+
+            drawShadow: true,
+
+            flippingTime: 800,
+
+            mobileScrollSupport: false,
+
+            maxShadowOpacity: 0.5
+
+        });
+
+        pageFlip.loadFromHTML(pages);
+
+        pageFlip.on("flip", updateControls);
+
+        loading.style.display = "none";
+
+        document.getElementById("prevBtn").disabled = false;
+        document.getElementById("nextBtn").disabled = false;
+
+        updateControls();
+
+        status.textContent =
+        "Đã tải thành công giáo trình TOÁN HỌC CƠ BẢN.";
+
+    } catch (error) {
+
+        loading.textContent = "Không thể tải sách.";
+
+        status.textContent =
+        "Lỗi: " + error.message +
+        ". Hãy kiểm tra tên và vị trí tệp PDF trên GitHub.";
+
+        console.error(error);
+
+    }
+
+}
+
+function updateControls() {
+
+    if (!pageFlip) return;
+
+    const current = pageFlip.getCurrentPageIndex();
+
+    pageInfo.textContent =
+        "Trang " + (current + 1) + " / " + totalPages;
+
+    document.getElementById("prevBtn").disabled =
+        current <= 0;
+
+    document.getElementById("nextBtn").disabled =
+        current >= totalPages - 1;
+
+}
+
+document.getElementById("prevBtn").onclick = () => {
+    if (pageFlip) pageFlip.flipPrev();
+};
+
+document.getElementById("nextBtn").onclick = () => {
+    if (pageFlip) pageFlip.flipNext();
+};
+
+document.getElementById("fullscreenBtn").onclick = async () => {
+
+    const section = document.querySelector(".reader-section");
+
+    if (!document.fullscreenElement) {
+        await section.requestFullscreen();
+    } else {
+        await document.exitFullscreen();
+    }
+
+};
+
+startBook();
+</script>
+
 </body>
 </html>
