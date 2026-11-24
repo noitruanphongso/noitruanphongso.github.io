@@ -1950,3 +1950,35 @@ body main .about-gallery {
         font-size: 21px !important;
     }
 }
+/* TACH RIENG MUC 3 VA MUC 4 */
+body main .vision-mission {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+body main .core-values {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    text-align: left !important;
+}
+
+body main .core-values .section-heading {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+body main .core-values .section-heading h2,
+body main .core-values .section-heading p {
+    text-align: left !important;
+}
+
+body main .core-values .values-grid {
+    width: 100% !important;
+    text-align: left !important;
+}
