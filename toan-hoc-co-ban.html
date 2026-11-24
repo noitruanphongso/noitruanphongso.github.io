@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán học cơ bản | Nhà Nội Trú Anphongsô</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .book-section {
+            padding: 45px 5%;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .book-toolbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .book-toolbar button {
+            padding: 12px 22px;
+            background: var(--navy);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .book-toolbar button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .book-frame {
+            max-width: 1000px;
+            min-height: 430px;
+            margin: 0 auto;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8e3d9;
+            border-radius: 8px;
+            box-shadow: 0 12px 35px rgba(20,43,73,.15);
+        }
+
+        .book-placeholder {
+            width: 100%;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: white;
+            color: var(--navy);
+            border: 1px solid #ddd;
+        }
+
+        .book-placeholder .book-symbol {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .book-placeholder h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 12px;
+        }
+
+        .book-placeholder p {
+            max-width: 550px;
+            line-height: 1.8;
+            color: var(--light-text);
+        }
+
+        .book-note {
+            margin-top: 20px;
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .book-frame {
+                padding: 12px;
+                min-height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="brand">
+        <img src="images/logo-anphongso.png"
+             alt="Logo Nhà Nội Trú Anphongsô"
+             class="logo-img">
+        <div>
+            <h1>NHÀ NỘI TRÚ ANPHONGSÔ</h1>
+            <p>SỨC KHOẺ · NHÂN BẢN · KỸ NĂNG · TRI THỨC · ĐỨC TIN</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Mở menu" aria-expanded="false"
+            aria-controls="navigation">☰</button>
+
+    <nav id="navigation">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="education.html">Giáo dục</a>
+        <a href="activities.html">Hoạt động</a>
+        <a href="library.html">Thư viện</a>
+        <a href="news.html">Tin tức</a>
+        <a href="team.html">Tổ chức</a>
+        <a href="contact.html">Liên hệ</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-banner">
+        <div>
+            <span class="eyebrow">THƯ VIỆN GIÁO DỤC</span>
+            <h2>TOÁN HỌC CƠ BẢN</h2>
+            <p>Giáo trình điện tử Nhà Nội Trú Anphongsô.</p>
+        </div>
+    </section>
+
+    <section class="book-section">
+        <div class="library-heading">
+            <span class="section-label">SÁCH ĐIỆN TỬ</span>
+            <h2>Toán học cơ bản</h2>
+            <p>Trình đọc sách theo bố cục hai trang mở.</p>
+        </div>
+
+        <div class="book-frame">
+            <div class="book-placeholder">
+                <div class="book-symbol">📖</div>
+                <h2>TOÁN HỌC CƠ BẢN</h2>
+                <p>
+                    Giáo trình sẽ được hiển thị tại đây dưới dạng
+                    sách điện tử hai trang có hiệu ứng lật.
+                </p>
+                <p>
+                    Nội dung sách đang chờ tệp PDF gốc để tích hợp.
+                </p>
+            </div>
+        </div>
+
+        <div class="book-toolbar">
+            <button disabled>← Trang trước</button>
+            <span>Chưa có nội dung sách</span>
+            <button disabled>Trang sau →</button>
+        </div>
+
+        <p class="book-note">
+            Khi có tệp giáo trình PDF, trình đọc sách sẽ được hoàn thiện.
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <h3>NHÀ NỘI TRÚ ANPHONGSÔ</h3>
+    <p>Thuộc Dòng Chúa Cứu Thế</p>
+    <p>SỨC KHOẺ · NHÂN BẢN · KỸ NĂNG · TRI THỨC · ĐỨC TIN</p>
+    <p>© 2026 Nhà Nội Trú Anphongsô. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
