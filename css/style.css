@@ -1213,3 +1213,85 @@ main .vision-mission .vision-card p {
         height: 240px;
     }
 }
+/* SỰ KIỆN TRANG CHỦ */
+
+.home-events {
+    padding: 65px 8%;
+    background: #FFFFFF;
+}
+
+.events-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.events-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-top: 10px;
+}
+
+.event-feature {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    padding: 35px;
+    gap: 35px;
+    align-items: center;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 130px;
+    background: var(--navy);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.event-date span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #D8BD82;
+}
+
+.event-date strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.event-description h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.event-description p {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+    .event-feature {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .event-date {
+        min-height: 110px;
+    }
+
+    .events-heading h2 {
+        font-size: 26px;
+    }
+}
