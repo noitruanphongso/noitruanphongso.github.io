@@ -32,3 +32,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// =========================================
+// SCROLL REVEAL EFFECT
+// =========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const revealElements = document.querySelectorAll(
+        ".intro, .value-card, .feature, .about-section, .closing-message"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("reveal-visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+        revealElements.forEach(function (element) {
+            element.classList.add("reveal");
+            observer.observe(element);
+        });
+
+    }
+
+});
