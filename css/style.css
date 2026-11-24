@@ -2036,3 +2036,19 @@ body main section.core-values .values-grid {
     display: block !important;
     width: 100% !important;
 }
+/* DONG BO NHAN 4 MUC TRANG GIOI THIEU */
+body main .intro > .section-label,
+body main .about-section .about-content > .section-label,
+body main .vision-mission .vision-card:first-child > .section-label,
+body main .core-values .section-heading > .section-label {
+    display: block !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: #B99A62 !important;
+    text-align: left !important;
+    margin: 0 0 18px 0 !important;
+}
