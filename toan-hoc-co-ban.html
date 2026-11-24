@@ -8,7 +8,31 @@
 <title>TOÁN HỌC CƠ BẢN | Nhà Nội Trú Anphongsô</title>
 
 <link rel="stylesheet" href="css/style.css">
+/* Căn giữa sách khi mở toàn màn hình */
+.reader-section:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    background: #111 !important;
+}
 
+.reader-section:fullscreen .book-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
 <style>
 * {
     box-sizing: border-box;
@@ -343,7 +367,19 @@ function resetZoom() {
     applyZoom();
 
 }
+document.getElementById("zoomInBtn").onclick = () => {
+    const rect = zoomArea.getBoundingClientRect();
+    zoomAt(rect.left + rect.width / 2,
+           rect.top + rect.height / 2, 1.2);
+};
 
+document.getElementById("zoomOutBtn").onclick = () => {
+    const rect = zoomArea.getBoundingClientRect();
+    zoomAt(rect.left + rect.width / 2,
+           rect.top + rect.height / 2, 1 / 1.2);
+};
+
+document.getElementById("resetZoomBtn").onclick = resetZoom;
 
 async function startBook() {
 
