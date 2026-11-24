@@ -781,3 +781,57 @@ html {
 .hero-button:hover {
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
+/* FIX HEADER - LOGO AND BRAND */
+
+.header {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand .logo-img {
+    width: 76px !important;
+    height: 76px !important;
+    max-width: none;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+}
+
+.brand p {
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .brand .logo-img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    .brand p {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}
