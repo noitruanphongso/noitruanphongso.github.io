@@ -1820,3 +1820,62 @@ main .ebook-categories .ebook-card:active {
         grid-template-columns: 1fr !important;
     }
 }
+/* =====================================
+   CAN CHINH TRANG GIOI THIEU
+   ===================================== */
+
+main .intro,
+main .about-section,
+main .vision-mission,
+main .core-values {
+    display: block !important;
+    width: 100%;
+    padding: 55px 10%;
+    text-align: left;
+}
+
+main .intro > *,
+main .about-section > *,
+main .vision-mission > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .intro p,
+main .about-section p,
+main .vision-mission p {
+    max-width: 1000px;
+    margin: 0 auto 18px;
+    text-align: justify;
+    line-height: 1.9;
+}
+
+main .vision-mission .vision-card {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 30px 35px;
+}
+
+main .about-section .about-image,
+main .about-section img,
+main .about-gallery {
+    display: none !important;
+}
+
+main .core-values .section-heading {
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    main .intro,
+    main .about-section,
+    main .vision-mission,
+    main .core-values {
+        padding: 40px 6%;
+    }
+
+    main .vision-mission .vision-card {
+        padding: 25px 20px;
+    }
+}
