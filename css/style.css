@@ -1820,9 +1820,9 @@ main .ebook-categories .ebook-card:active {
         grid-template-columns: 1fr !important;
     }
 }
-/* =====================================
-   CAN CHINH TRANG GIOI THIEU
-   ===================================== */
+/* =========================================
+   TRINH BAY TRANG GIOI THIEU
+   ========================================= */
 
 main .intro,
 main .about-section,
@@ -1830,52 +1830,100 @@ main .vision-mission,
 main .core-values {
     display: block !important;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 55px 10%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Tiêu đề mục chính */
+main .intro > .section-label,
+main .about-section .section-label,
+main .vision-card > .section-label,
+main .core-values .section-label {
+    display: block;
+    margin-bottom: 14px;
+    color: #a4773c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Tiêu đề lớn */
+main .intro h2,
+main .about-section h2,
+main .core-values h2 {
+    margin: 0 0 28px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+/* Nội dung trình bày */
+main .intro p,
+main .about-section p,
+main .vision-card p,
+main .core-values .section-heading p,
+main .value-card p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* Mục 03: xếp thành một cột */
+main .vision-mission .vision-card {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 35px;
+    padding: 25px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+}
+
+main .vision-card h3 {
+    margin: 0 0 18px;
+    font-size: 23px;
+}
+
+/* Mục 04: năm giá trị xếp thành một cột */
+main .core-values .section-heading {
     text-align: left;
 }
 
-main .intro > *,
-main .about-section > *,
-main .vision-mission > * {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+main .core-values .values-grid {
+    display: block;
 }
 
-main .intro p,
-main .about-section p,
-main .vision-mission p {
-    max-width: 1000px;
-    margin: 0 auto 18px;
-    text-align: justify;
-    line-height: 1.9;
+main .core-values .value-card {
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-main .vision-mission .vision-card {
-    max-width: 1000px;
-    margin: 0 auto 25px;
-    padding: 30px 35px;
-}
-
-main .about-section .about-image,
+/* Ẩn hình ảnh trong nội dung giới thiệu */
 main .about-section img,
 main .about-gallery {
     display: none !important;
 }
 
-main .core-values .section-heading {
-    text-align: left;
-}
-
+/* Màn hình điện thoại */
 @media (max-width: 600px) {
     main .intro,
     main .about-section,
     main .vision-mission,
     main .core-values {
-        padding: 40px 6%;
+        padding: 40px 7%;
     }
 
-    main .vision-mission .vision-card {
-        padding: 25px 20px;
+    main .intro h2,
+    main .about-section h2,
+    main .core-values h2 {
+        font-size: 25px;
     }
 }
