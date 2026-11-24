@@ -2052,9 +2052,9 @@ body main .core-values .section-heading > .section-label {
     text-align: left !important;
     margin: 0 0 18px 0 !important;
 }
-/* DONG BO FONT RIENG CHO NHAN MUC 04 */
-body main .core-values .section-heading > .section-label {
-    font-family: 'Roboto', sans-serif !important;
-    font-style: normal !important;
-    font-weight: 800 !important;
+body main section.core-values .section-heading span.section-label {
+    font: 800 22px/1.5 'Roboto', sans-serif !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: #B99A62 !important;
 }
