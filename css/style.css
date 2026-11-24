@@ -1459,3 +1459,63 @@ main .vision-mission .vision-card p {
         transition-duration: 0.01ms !important;
     }
 }
+/* BIẾN TOÀN BỘ KHUNG THÀNH LIÊN KẾT */
+
+.news-card,
+.featured-main,
+.event-feature {
+    display: grid;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* HIỆU ỨNG KHI DI CHUỘT VÀO KHUNG TIN TỨC */
+
+.news-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(20, 43, 73, 0.16);
+}
+
+/* HIỆU ỨNG TIN NỔI BẬT */
+
+.featured-main {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.featured-main:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(20, 43, 73, 0.12);
+}
+
+/* HIỆU ỨNG KHUNG SỰ KIỆN */
+
+.event-feature {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.event-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(20, 43, 73, 0.12);
+}
+
+/* DÒNG ĐỌC THÊM */
+
+.news-read-more {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* CON TRỎ KHI DI CHUỘT */
+
+.news-card:hover,
+.featured-main:hover,
+.event-feature:hover {
+    cursor: pointer;
+}
