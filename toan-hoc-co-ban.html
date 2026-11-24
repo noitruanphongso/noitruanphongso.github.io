@@ -243,8 +243,104 @@ const loading = document.getElementById("loading");
 const status = document.getElementById("status");
 const pageInfo = document.getElementById("pageInfo");
 
-let pageFlip = null;
-let totalPages = 0;
+
+// CẤU HÌNH PHÓNG TO VÀ DI CHUYỂN SÁCH
+
+let zoomScale = 1;
+let zoomX = 0;
+let zoomY = 0;
+
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+
+const zoomArea = document.querySelector(".book-container");
+
+function applyZoom() {
+    bookElement.style.transform =
+        `translate(${zoomX}px, ${zoomY}px) scale(${zoomScale})`;
+}
+
+function zoomAt(x, y, factor) {
+
+    const rect = zoomArea.getBoundingClientRect();
+
+    const mouseX = x - rect.left;
+    const mouseY = y - rect.top;
+
+    const newScale = Math.min(3, Math.max(1, zoomScale * factor));
+
+    const contentX = (mouseX - zoomX) / zoomScale;
+    const contentY = (mouseY - zoomY) / zoomScale;
+
+    zoomX = mouseX - contentX * newScale;
+    zoomY = mouseY - contentY * newScale;
+
+    zoomScale = newScale;
+
+    applyZoom();
+}
+
+// LĂN CHUỘT ĐỂ PHÓNG TO THEO CON TRỎ
+
+zoomArea.addEventListener("wheel", function(event) {
+
+    event.preventDefault();
+
+    const factor = event.deltaY < 0 ? 1.15 : 1 / 1.15;
+
+    zoomAt(event.clientX, event.clientY, factor);
+
+}, { passive: false });
+
+// KÉO SÁCH KHI ĐÃ PHÓNG TO
+
+zoomArea.addEventListener("pointerdown", function(event) {
+
+    if (zoomScale <= 1) return;
+
+    isDragging = true;
+
+    dragStartX = event.clientX - zoomX;
+    dragStartY = event.clientY - zoomY;
+
+    zoomArea.setPointerCapture(event.pointerId);
+
+    event.preventDefault();
+
+});
+
+zoomArea.addEventListener("pointermove", function(event) {
+
+    if (!isDragging) return;
+
+    zoomX = event.clientX - dragStartX;
+    zoomY = event.clientY - dragStartY;
+
+    applyZoom();
+
+});
+
+zoomArea.addEventListener("pointerup", function() {
+    isDragging = false;
+});
+
+zoomArea.addEventListener("pointercancel", function() {
+    isDragging = false;
+});
+
+// ĐƯA SÁCH VỀ KÍCH THƯỚC BAN ĐẦU
+
+function resetZoom() {
+
+    zoomScale = 1;
+    zoomX = 0;
+    zoomY = 0;
+
+    applyZoom();
+
+}
+
 
 async function startBook() {
 
