@@ -1002,3 +1002,55 @@ main .vision-mission .vision-card p {
         height: 260px;
     }
 }
+/* CHUYÊN MỤC TRANG CHỦ */
+
+.home-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 45px 8%;
+    background: var(--cream);
+}
+
+.category-tab {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    background: #FFFFFF;
+    border-bottom: 3px solid var(--gold);
+    text-decoration: none;
+    color: var(--navy);
+    box-shadow: 0 5px 20px rgba(20, 43, 73, 0.07);
+    transition: 0.3s ease;
+}
+
+.category-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 43, 73, 0.12);
+}
+
+.category-number {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.category-title {
+    flex: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.category-arrow {
+    font-size: 23px;
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .home-categories {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+    }
+}
