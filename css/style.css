@@ -1927,3 +1927,60 @@ main .about-gallery {
         font-size: 25px;
     }
 }
+/* DIEU CHINH CO CHU TRANG GIOI THIEU */
+
+/* Mở rộng nội dung */
+main .intro,
+main .about-section,
+main .vision-mission,
+main .core-values {
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Nội dung trình bày lớn hơn */
+main .intro p,
+main .about-section p,
+main .vision-card p,
+main .core-values .section-heading p,
+main .value-card p {
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+/* Các mục 01, 02, 03, 04 nổi bật hơn */
+main .intro > .section-label,
+main .about-section .section-label,
+main .vision-card > .section-label,
+main .core-values .section-label {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+/* Tiêu đề nội dung */
+main .intro h2,
+main .about-section h2,
+main .core-values h2,
+main .vision-card h3 {
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    main .intro p,
+    main .about-section p,
+    main .vision-card p,
+    main .core-values .section-heading p,
+    main .value-card p {
+        font-size: 17px;
+    }
+
+    main .intro > .section-label,
+    main .about-section .section-label,
+    main .vision-card > .section-label,
+    main .core-values .section-label {
+        font-size: 18px;
+    }
+}
