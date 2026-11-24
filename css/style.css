@@ -1820,167 +1820,133 @@ main .ebook-categories .ebook-card:active {
         grid-template-columns: 1fr !important;
     }
 }
-/* =========================================
+/* =====================================
    TRINH BAY TRANG GIOI THIEU
-   ========================================= */
+   ===================================== */
 
-main .intro,
-main .about-section,
-main .vision-mission,
-main .core-values {
+/* BỐ CỤC CÁC MỤC */
+body main .intro,
+body main .about-section,
+body main .vision-mission,
+body main .core-values {
     display: block !important;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 55px 10%;
-    text-align: left;
-    box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 55px 3% !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
 }
 
-/* Tiêu đề mục chính */
-main .intro > .section-label,
-main .about-section .section-label,
-main .vision-card > .section-label,
-main .core-values .section-label {
-    display: block;
-    margin-bottom: 14px;
-    color: #a4773c;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+/* NỘI DUNG RỘNG TOÀN TRANG */
+body main .about-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
 }
 
-/* Tiêu đề lớn */
-main .intro h2,
-main .about-section h2,
-main .core-values h2 {
-    margin: 0 0 28px;
-    font-size: 30px;
-    line-height: 1.4;
+/* NHÃN MỤC CHÍNH 01, 02, 03, 04 */
+body main .intro > .section-label,
+body main .about-section .about-content > .section-label,
+body main .vision-mission .vision-card:first-child > .section-label,
+body main .core-values .section-heading > .section-label {
+    display: block !important;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    margin-bottom: 18px !important;
 }
 
-/* Nội dung trình bày */
-main .intro p,
-main .about-section p,
-main .vision-card p,
-main .core-values .section-heading p,
-main .value-card p {
-    margin: 0 0 18px;
-    font-size: 16px;
-    line-height: 1.9;
-    text-align: justify;
+/* NHÃN PHỤ */
+body main .vision-card:not(:first-child) .section-label {
+    font-size: 13px !important;
 }
 
-/* Mục 03: xếp thành một cột */
-main .vision-mission .vision-card {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 35px;
-    padding: 25px 0;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    box-shadow: none;
+/* TIÊU ĐỀ */
+body main .intro h2,
+body main .about-content h2,
+body main .core-values h2 {
+    font-size: 32px !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
 }
 
-main .vision-card h3 {
-    margin: 0 0 18px;
-    font-size: 23px;
+body main .vision-card h3 {
+    font-size: 24px !important;
 }
 
-/* Mục 04: năm giá trị xếp thành một cột */
-main .core-values .section-heading {
-    text-align: left;
+/* NỘI DUNG VĂN BẢN */
+body main .intro p,
+body main .about-content p,
+body main .vision-card p,
+body main .core-values p {
+    max-width: none !important;
+    width: 100% !important;
+    font-size: 20px !important;
+    line-height: 1.9 !important;
+    text-align: justify !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-main .core-values .values-grid {
-    display: block;
+/* CÁC MỤC XẾP THÀNH MỘT CỘT */
+body main .vision-mission {
+    display: block !important;
 }
 
-main .core-values .value-card {
-    width: 100%;
-    margin: 0 0 25px;
-    padding: 20px 0;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+body main .vision-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 30px !important;
+    padding: 25px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    box-shadow: none !important;
 }
 
-/* Ẩn hình ảnh trong nội dung giới thiệu */
-main .about-section img,
-main .about-gallery {
+/* 5 GIÁ TRỊ GIÁO DỤC XẾP DỌC */
+body main .values-grid {
+    display: block !important;
+}
+
+body main .value-card {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 20px !important;
+    padding: 20px 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* ẨN ẢNH TRONG PHẦN GIỚI THIỆU */
+body main .about-section img,
+body main .about-gallery {
     display: none !important;
 }
 
-/* Màn hình điện thoại */
-@media (max-width: 600px) {
-    main .intro,
-    main .about-section,
-    main .vision-mission,
-    main .core-values {
-        padding: 40px 7%;
+/* HIỂN THỊ TRÊN ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    body main .intro,
+    body main .about-section,
+    body main .vision-mission,
+    body main .core-values {
+        padding: 35px 5% !important;
     }
 
-    main .intro h2,
-    main .about-section h2,
-    main .core-values h2 {
-        font-size: 25px;
-    }
-}
-/* DIEU CHINH CO CHU TRANG GIOI THIEU */
-
-/* Mở rộng nội dung */
-main .intro,
-main .about-section,
-main .vision-mission,
-main .core-values {
-    max-width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-/* Nội dung trình bày lớn hơn */
-main .intro p,
-main .about-section p,
-main .vision-card p,
-main .core-values .section-heading p,
-main .value-card p {
-    font-size: 19px;
-    line-height: 1.9;
-}
-
-/* Các mục 01, 02, 03, 04 nổi bật hơn */
-main .intro > .section-label,
-main .about-section .section-label,
-main .vision-card > .section-label,
-main .core-values .section-label {
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-}
-
-/* Tiêu đề nội dung */
-main .intro h2,
-main .about-section h2,
-main .core-values h2,
-main .vision-card h3 {
-    font-size: 30px;
-}
-
-@media (max-width: 600px) {
-    main .intro p,
-    main .about-section p,
-    main .vision-card p,
-    main .core-values .section-heading p,
-    main .value-card p {
-        font-size: 17px;
+    body main .intro p,
+    body main .about-content p,
+    body main .vision-card p,
+    body main .core-values p {
+        font-size: 17px !important;
     }
 
-    main .intro > .section-label,
-    main .about-section .section-label,
-    main .vision-card > .section-label,
-    main .core-values .section-label {
-        font-size: 18px;
+    body main .intro h2,
+    body main .about-content h2,
+    body main .core-values h2 {
+        font-size: 25px !important;
+    }
+
+    body main .vision-card h3 {
+        font-size: 21px !important;
     }
 }
