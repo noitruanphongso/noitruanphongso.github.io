@@ -1054,3 +1054,80 @@ main .vision-mission .vision-card p {
         padding: 30px 6%;
     }
 }
+/* TIN NỔI BẬT TRANG CHỦ */
+
+.featured-news {
+    padding: 65px 8%;
+    background: #FFFFFF;
+}
+
+.featured-heading {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 18px;
+}
+
+.featured-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-top: 10px;
+}
+
+.featured-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.featured-image {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.featured-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 15px 0;
+}
+
+.news-category {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.featured-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    line-height: 1.4;
+    color: var(--navy);
+    margin: 18px 0;
+}
+
+.featured-content p {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 768px) {
+    .featured-main {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image img {
+        height: 280px;
+    }
+
+    .featured-content h3 {
+        font-size: 24px;
+    }
+}
