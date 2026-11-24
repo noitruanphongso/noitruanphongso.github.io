@@ -877,3 +877,38 @@ html {
         padding: 55px 6%;
     }
 }
+/* FIX VISION MISSION LAYOUT */
+
+main .vision-mission {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 25px !important;
+    width: 100%;
+    align-items: stretch;
+}
+
+main .vision-mission .vision-card {
+    display: block !important;
+    min-width: 0;
+    padding: 35px 28px;
+    background: #FFFFFF;
+    border-top: 3px solid #B99A62;
+    box-shadow: 0 5px 20px rgba(20, 43, 73, 0.06);
+}
+
+main .vision-mission .vision-card h3 {
+    margin: 15px 0;
+    color: #142B49;
+    font-size: 22px;
+}
+
+main .vision-mission .vision-card p {
+    line-height: 1.8;
+    color: #666666;
+}
+
+@media (max-width: 900px) {
+    main .vision-mission {
+        grid-template-columns: 1fr !important;
+    }
+}
