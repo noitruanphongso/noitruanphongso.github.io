@@ -518,26 +518,25 @@ document.getElementById("nextBtn").onclick = () => {
     if (pageFlip) pageFlip.flipNext();
 };
 
+// ĐIỀU KHIỂN CHẾ ĐỘ TOÀN MÀN HÌNH
+
 document.getElementById("fullscreenBtn").onclick = async () => {
-
-    const book = document.querySelector(".book-container");
-
-    if (!document.fullscreenElement) {
-        
-document.getElementById("fullscreenBtn").onclick = async () => {
-
     const reader = document.querySelector(".reader-section");
 
-    if (!document.fullscreenElement) {
-        await reader.requestFullscreen();
-    } else {
-        await document.exitFullscreen();
+    try {
+        if (!document.fullscreenElement) {
+            await reader.requestFullscreen();
+        } else {
+            await document.exitFullscreen();
+        }
+    } catch (error) {
+        status.textContent = "Không thể mở toàn màn hình: " + error.message;
     }
-
 };
 
-document.addEventListener("fullscreenchange", () => {
+// ẨN CÁC THÀNH PHẦN KHÔNG CẦN THIẾT KHI TOÀN MÀN HÌNH
 
+document.addEventListener("fullscreenchange", () => {
     const isFullscreen = !!document.fullscreenElement;
 
     document.querySelector(".reader-heading").style.display =
@@ -549,24 +548,13 @@ document.addEventListener("fullscreenchange", () => {
     document.getElementById("status").style.display =
         isFullscreen ? "none" : "block";
 
-    document.querySelector(".reader-section").style.background =
-        isFullscreen ? "#252525" : "#e9e5dc";
+    const reader = document.querySelector(".reader-section");
+    reader.style.background = isFullscreen ? "#252525" : "#e9e5dc";
 
-    document.querySelector(".book-container").style.maxWidth =
-        isFullscreen ? "100vw" : "1150px";
-
-    document.querySelector(".book-container").style.height =
-        isFullscreen ? "100vh" : "auto";
-
-});
-
-    } else {
-        await document.exitFullscreen();
-    }
-
-};
-
-startBook();
+    const container = document.querySelector(".book-container");
+    container.style.maxWidth = isFullscreen ? "100vw" : "1150px";
+    container.style.height = isFullscreen ? "100vh" : "auto";
+});startBook();
 </script>
 
 </body>
