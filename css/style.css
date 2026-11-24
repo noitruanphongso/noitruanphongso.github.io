@@ -1982,3 +1982,57 @@ body main .core-values .values-grid {
     width: 100% !important;
     text-align: left !important;
 }
+/* FIX RIENG MUC 03 VA MUC 04 TRANG GIOI THIEU */
+
+/* MỤC 03: BỎ KHUNG BA CỘT */
+body main section.vision-mission {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 55px 3% !important;
+    background: #FFFFFF !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body main section.vision-mission .vision-card {
+    width: 100% !important;
+    margin: 0 0 30px !important;
+    padding: 25px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #E8E2D6 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* MỤC 04: CĂN TRÁI VÀ TÁCH RIÊNG */
+body main section.core-values {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 55px 3% !important;
+    background: #F6F3EC !important;
+    text-align: left !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body main section.core-values .section-heading {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 30px !important;
+    text-align: left !important;
+}
+
+body main section.core-values .section-heading h2,
+body main section.core-values .section-heading p {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+body main section.core-values .values-grid {
+    display: block !important;
+    width: 100% !important;
+}
