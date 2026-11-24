@@ -375,7 +375,43 @@ document.getElementById("fullscreenBtn").onclick = async () => {
     const book = document.querySelector(".book-container");
 
     if (!document.fullscreenElement) {
-        await book.requestFullscreen();
+        
+document.getElementById("fullscreenBtn").onclick = async () => {
+
+    const reader = document.querySelector(".reader-section");
+
+    if (!document.fullscreenElement) {
+        await reader.requestFullscreen();
+    } else {
+        await document.exitFullscreen();
+    }
+
+};
+
+document.addEventListener("fullscreenchange", () => {
+
+    const isFullscreen = !!document.fullscreenElement;
+
+    document.querySelector(".reader-heading").style.display =
+        isFullscreen ? "none" : "block";
+
+    document.querySelector(".controls").style.display =
+        isFullscreen ? "none" : "flex";
+
+    document.getElementById("status").style.display =
+        isFullscreen ? "none" : "block";
+
+    document.querySelector(".reader-section").style.background =
+        isFullscreen ? "#252525" : "#e9e5dc";
+
+    document.querySelector(".book-container").style.maxWidth =
+        isFullscreen ? "100vw" : "1150px";
+
+    document.querySelector(".book-container").style.height =
+        isFullscreen ? "100vh" : "auto";
+
+});
+
     } else {
         await document.exitFullscreen();
     }
