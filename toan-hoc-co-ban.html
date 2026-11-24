@@ -37,6 +37,19 @@
     width: 100%;
     max-width: 1150px;
     margin: auto;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    touch-action: none;
+}
+
+.book-container:active {
+    cursor: grabbing;
+}
+
+#book {
+    transform-origin: 0 0;
+    will-change: transform;
 }
 
 .book-container:fullscreen {
