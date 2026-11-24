@@ -708,3 +708,30 @@ html {
 .hero-button span {
     font-size: 19px;
 }
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.hero-button span {
+    font-size: 19px;
+}
