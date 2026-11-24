@@ -372,10 +372,10 @@ document.getElementById("nextBtn").onclick = () => {
 
 document.getElementById("fullscreenBtn").onclick = async () => {
 
-    const section = document.querySelector(".reader-section");
+    const book = document.querySelector(".book-container");
 
     if (!document.fullscreenElement) {
-        await section.requestFullscreen();
+        await book.requestFullscreen();
     } else {
         await document.exitFullscreen();
     }
