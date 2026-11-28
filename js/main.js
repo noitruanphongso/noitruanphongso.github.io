@@ -70,3 +70,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// =========================================
+// XỬ LÝ CỬA SỔ ĐĂNG NHẬP
+// =========================================
+
+const openLogin = document.getElementById("openLogin");
+const loginModal = document.getElementById("loginModal");
+const closeLogin = document.getElementById("closeLogin");
+
+if (openLogin && loginModal && closeLogin) {
+
+    openLogin.addEventListener("click", function () {
+        loginModal.classList.add("active");
+    });
+
+    closeLogin.addEventListener("click", function () {
+        loginModal.classList.remove("active");
+    });
+
+    loginModal.addEventListener("click", function (event) {
+        if (event.target === loginModal) {
+            loginModal.classList.remove("active");
+        }
+    });
+
+}
